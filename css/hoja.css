@@ -1,0 +1,318 @@
+@charset "utf-8";
+
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size: 16px;
+}
+body{
+  background-color: #280626;
+  color: #ffffff;
+  font-family: "Alan Sans", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+#contenedor{
+  width: 90vw;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+header{
+  width: 90vw;
+  height: 10vh;
+  margin: 0 auto;
+  background-color: #280626;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+#logo{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#logo a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+#logo img{
+  height: 8vh;
+  width: auto;
+  display: block;
+  max-width: 28vw;
+}
+
+#juegos{
+  width: 90vw;
+  height: 80vh;
+  margin-top: 4vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#cuadro1,
+#cuadro2,
+#cuadro3{
+  width: 50vh;
+  height: 80vh;
+  border-radius: 5vh;
+  border: 1px solid rgba(255,255,255,0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+#juegos .bg{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+#juegos .overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color .25s ease, opacity .25s ease;
+	
+}
+#juegos .opciones{
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+border-radius: 1.6vh;
+ 
+}
+#juegos .opcion{
+  
+  width: 26vh;
+  min-height: 6vh;
+  line-height: 6vh;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 1.6vh;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+
+#juegos .opcion:hover{
+  background-color: #ffffff;
+  color: #E2404A;
+  border-color: #E2404A;
+	
+}
+#juegos article:hover .overlay{
+  background-color: rgba(226,64,74,0.55);
+}
+
+
+footer{
+  width: 90vw;
+  height: 10vh;
+  margin-top: 4vh;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+footer p{
+  font-size: 14px;
+}
+
+#jugadores{
+  width: 90vw;
+  margin-top: 4vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+
+.tarjeta_jug{
+  width: 27vw;
+  height: 36vh;
+  border-radius: 2vh;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay_jug{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;	
+}
+
+.tarjeta_jug:hover .overlay_jug{
+  background-color: rgba(226,64,74,0.55);
+  opacity: 1;
+}
+
+.opciones_jug{
+  display: flex;
+  flex-direction: column;
+  gap: 1.4vh;
+  align-items: center;
+  transition: opacity .25s ease;
+}
+
+.opcion_jug{
+  display: block;
+  width: 16vw;
+  min-height: 5vh;
+  line-height: 5vh;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 1vh;
+  background-color: rgba(0,0,0,0.25);
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.opcion_jug:hover{
+  background-color: #ffffff;
+  color: #E2404A;
+  border-color: #E2404A;
+}
+
+.info_jug{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.4vh 1.4vw;
+}
+
+.nick_jug{
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 16px;
+}
+
+.meta_jug{
+  font-size: 13px;
+  color: #CFCFCF;
+  margin-top: .6vh;
+}
+
+#equipos{
+  width: 90vw;
+  margin-top: 4vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.card_eqp{
+  width: 90vw;
+  height: 24vh;
+  border-radius: 2vh;
+  position: relative;
+  background-position: center;
+  background-color: #720072; 
+  overflow: hidden; 
+}
+
+.card_eqp:hover{
+  box-shadow: 0 1vh 3vw rgba(0,0,0,.35);
+}
+
+.capa_eqp{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,.55), rgba(0,0,0,.15));
+}
+
+.contenido_eqp{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vh 2vw;
+}
+
+.badge_eqp{
+  width: 10vh;
+  height: 10vh;
+  flex: 0 0 auto;
+}
+
+.badge_eqp img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.datos_eqp{
+  flex: 1 1 auto;
+  padding: 0 2vw;
+}
+
+.nombre_eqp{
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 18px;
+}
+
+.meta_eqp{
+  margin-top: .6vh;
+  font-size: 14px;
+  color: #CFCFCF;
+}
+
+.acciones_eqp{
+  display: flex;
+  gap: 1vw;
+  flex: 0 0 auto;
+}
+
+.btn_eqp{
+  display: inline-block;
+  min-width: 12vw;
+  text-align: center;
+  min-height: 5vh;
+  line-height: 5vh;
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 1vh;
+  border: 1px solid rgba(255,255,255,0.6);
+  background-color: rgba(0,0,0,0.25);
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.btn_eqp:hover{
+  background-color: #fff;
+  color: #E2404A;
+  border-color: #E2404A;
+}
