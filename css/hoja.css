@@ -258,10 +258,6 @@ footer p{
   overflow: hidden; 
 }
 
-.card_eqp:hover{
-  box-shadow: 0 1vh 3vw rgba(0,0,0,.35);
-}
-
 .capa_eqp{
   position: absolute;
   inset: 0;
@@ -319,7 +315,7 @@ footer p{
   min-height: 5vh;
   line-height: 5vh;
   text-decoration: none;
-  color: #fff;
+  color: #fffff;
   font-size: 15px;
   border-radius: 1vh;
   border: 1px solid rgba(255,255,255,0.6);
@@ -332,4 +328,5 @@ footer p{
   color: #E2404A;
   border-color: #E2404A;
 }
+
 
