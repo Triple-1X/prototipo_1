@@ -9,7 +9,7 @@
 body {
   background-color: #280626;
   color: #ffffff;
-  font-family: 'Alan Sans', Arial, sans-serif;
+  font-family: 'Alan Sans';
   line-height: 1.4;
 }
 
@@ -359,3 +359,4 @@ a:hover {
   padding: 2vh 4vw;
   text-align: center;
 }
+
